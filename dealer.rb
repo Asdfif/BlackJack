@@ -9,7 +9,7 @@ class Dealer < Player
   end
 
   def decision(deck)
-    if calculate < 17
+    if @hand.calculate < 17
       take_card(deck)
     else
       skip
