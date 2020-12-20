@@ -1,0 +1,17 @@
+# frozen_string_literal: true
+
+require_relative 'game'
+
+class Dealer < Player
+  def initialize
+    super('Dealer')
+  end
+
+  def decision(deck)
+    if @hand.calculate < 17
+      take_card(deck)
+    else
+      skip
+    end
+  end
+end
