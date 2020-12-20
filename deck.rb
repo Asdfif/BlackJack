@@ -7,8 +7,8 @@ class Deck
 
   def initialize
     @all_cards = []
-    (0..(Card::VALUES.size - 1)).each do |i|
-      (0..(Card::SUITS.size - 1)).each do |j|
+    Card::VALUES.each do |i|
+      Card::SUITS.each do |j|
         @all_cards << Card.new(Card::VALUES[i], Card::SUITS[j])
       end
     end

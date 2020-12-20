@@ -13,7 +13,6 @@ class Game
 
   def initialize(name, interface)
     @interface = interface
-    @players = []
     @queue = []
     @players = []
     @players << Player.new(name)
