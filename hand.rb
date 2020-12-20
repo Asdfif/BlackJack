@@ -7,8 +7,9 @@ class Hand
 
   def initialize(deck)
     @cards = []
-    add_card(deck)
-    add_card(deck)
+    2.times do 
+      add_card(deck)
+    end
   end
 
   def add_card(deck)
@@ -35,5 +36,4 @@ class Hand
     end
     hand_value
   end
-
 end

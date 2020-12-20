@@ -7,13 +7,10 @@ class Deck
 
   def initialize
     @all_cards = []
-    suits = Card.const_get('SUITS')
-    values = Card.const_get('VALUES')
-    (0..(values.size - 1)).each do |i|
-      (0..(suits.size - 1)).each do |j|
-        @all_cards << Card.new(values[i], suits[j])
+    (0..(Card::VALUES.size - 1)).each do |i|
+      (0..(Card::SUITS.size - 1)).each do |j|
+        @all_cards << Card.new(Card::VALUES[i], Card::SUITS[j])
       end
     end
   end
-  
 end

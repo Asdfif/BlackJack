@@ -24,7 +24,7 @@ class Interface
 
   def player_hand(player)
     puts
-    if player.id != 0
+    if player.name != 'Dealer'
       puts "#{player.name} #{player.cash}$ cards "
       show_cards(player)
     else
@@ -35,7 +35,7 @@ class Interface
 
   def show_cards(player)
     player.hand.cards.each do |card|
-      puts card.card_name
+      puts "#{card.card_nominal}#{card.card_suit} "
     end
   end
 
@@ -67,7 +67,7 @@ class Interface
 
   def player_name
     puts 'Введите имя игрока'
-    name = gets.chomp
+    gets.chomp
   end
 
   def new_round_menu
@@ -78,7 +78,7 @@ class Interface
   end
 
   def looser(player)
-  	puts
+    puts
     puts "Игрок #{player.name} остался без денег"
   end
 end

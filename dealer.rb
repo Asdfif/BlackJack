@@ -5,7 +5,6 @@ require_relative 'game'
 class Dealer < Player
   def initialize
     super('Dealer')
-    @id = 0
   end
 
   def decision(deck)
